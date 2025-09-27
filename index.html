@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma & James - Wedding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #f7f3f0;
+            --color-secondary: #e8ddd4;
+            --color-accent: #d4a574;
+            --color-text: #2c2c2c;
+            --color-text-light: #6b6b6b;
+        }
+        
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        
+        .bg-primary { background-color: var(--color-primary); }
+        .bg-secondary { background-color: var(--color-secondary); }
+        .bg-accent { background-color: var(--color-accent); }
+        .text-primary { color: var(--color-text); }
+        .text-secondary { color: var(--color-text-light); }
+        .text-accent { color: var(--color-accent); }
+        .border-accent { border-color: var(--color-accent); }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-primary text-primary font-sans">
+     Navigation 
+    <nav class="fixed top-0 w-full z-50 bg-primary/90 backdrop-blur-sm border-b border-secondary">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="font-serif text-2xl font-semibold text-accent">E & J</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-secondary hover:text-accent transition-colors">Home</a>
+                    <a href="#story" class="text-secondary hover:text-accent transition-colors">Our Story</a>
+                    <a href="#details" class="text-secondary hover:text-accent transition-colors">Details</a>
+                    <a href="#gallery" class="text-secondary hover:text-accent transition-colors">Gallery</a>
+                    <a href="#rsvp" class="text-secondary hover:text-accent transition-colors">RSVP</a>
+                </div>
+                <button class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+     Hero Section 
+    <section id="home" class="min-h-screen hero-gradient flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="/placeholder.svg?height=800&width=1200" alt="" class="w-full h-full object-cover">
+        </div>
+        <div class="text-center z-10 fade-in">
+            <h1 class="font-serif text-6xl md:text-8xl font-light text-primary mb-6">
+                Emma <span class="text-accent">&</span> James
+            </h1>
+            <p class="text-xl md:text-2xl text-secondary mb-8 font-light">
+                Together with our families, we invite you to celebrate our love
+            </p>
+            <div class="text-lg text-secondary mb-12">
+                <p class="mb-2">Saturday, June 15th, 2024</p>
+                <p>Rosewood Manor • Napa Valley, California</p>
+            </div>
+            <a href="#rsvp" class="inline-block bg-accent text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all hover-lift">
+                RSVP Now
+            </a>
+        </div>
+    </section>
+
+     Our Story Section 
+    <section id="story" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-4xl md:text-5xl text-primary mb-6">Our Love Story</h2>
+                <div class="w-24 h-px bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <img src="/placeholder.svg?height=500&width=400" alt="Emma and James" class="w-full rounded-lg shadow-lg hover-lift">
+                </div>
+                <div class="fade-in">
+                    <h3 class="font-serif text-2xl text-accent mb-6">How We Met</h3>
+                    <p class="text-secondary leading-relaxed mb-6">
+                        Our story began on a rainy Tuesday morning at a small coffee shop in downtown Portland. Emma was reading her favorite novel while James was sketching architectural plans at the next table. When Emma accidentally knocked over her coffee, James offered his napkins, and they've been inseparable ever since.
+                    </p>
+                    <p class="text-secondary leading-relaxed mb-6">
+                        Three years of adventures, countless coffee dates, and one perfect proposal later, we're ready to say "I do" surrounded by the people we love most.
+                    </p>
+                    <div class="text-accent font-serif text-lg">
+                        "In all the world, there is no heart for me like yours." - Maya Angelou
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Wedding Details Section 
+    <section id="details" class="py-20 bg-secondary">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-4xl md:text-5xl text-primary mb-6">Wedding Details</h2>
+                <div class="w-24 h-px bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                 Ceremony 
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center hover-lift fade-in">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-primary mb-4">Ceremony</h3>
+                    <p class="text-secondary mb-2">4:00 PM</p>
+                    <p class="text-secondary mb-4">Rosewood Manor Gardens</p>
+                    <p class="text-sm text-secondary">Outdoor ceremony overlooking the vineyard</p>
+                </div>
+
+                 Cocktail Hour 
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center hover-lift fade-in">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-primary mb-4">Cocktail Hour</h3>
+                    <p class="text-secondary mb-2">5:00 PM</p>
+                    <p class="text-secondary mb-4">Terrace Lounge</p>
+                    <p class="text-sm text-secondary">Signature cocktails and hors d'oeuvres</p>
+                </div>
+
+                 Reception 
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center hover-lift fade-in">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-primary mb-4">Reception</h3>
+                    <p class="text-secondary mb-2">6:30 PM</p>
+                    <p class="text-secondary mb-4">Grand Ballroom</p>
+                    <p class="text-sm text-secondary">Dinner, dancing, and celebration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Gallery Section 
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-4xl md:text-5xl text-primary mb-6">Our Journey</h2>
+                <div class="w-24 h-px bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="hover-lift fade-in">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Engagement" class="w-full h-48 object-cover rounded-lg shadow-lg">
+                </div>
+                <div class="hover-lift fade-in">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Travel" class="w-full h-48 object-cover rounded-lg shadow-lg">
+                </div>
+                <div class="hover-lift fade-in">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Cooking" class="w-full h-48 object-cover rounded-lg shadow-lg">
+                </div>
+                <div class="hover-lift fade-in">
+                    <img src="/placeholder.svg?height=300&width=300" alt="With pets" class="w-full h-48 object-cover rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+     RSVP Section 
+    <section id="rsvp" class="py-20 bg-secondary">
+        <div class="max-w-2xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-4xl md:text-5xl text-primary mb-6">RSVP</h2>
+                <div class="w-24 h-px bg-accent mx-auto mb-6"></div>
+                <p class="text-secondary text-lg">Please respond by April 15th, 2024</p>
+            </div>
+            
+            <form class="bg-white p-8 rounded-lg shadow-lg fade-in">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-primary font-medium mb-2">First Name</label>
+                        <input type="text" class="w-full px-4 py-3 border border-secondary rounded-lg focus:outline-none focus:border-accent">
+                    </div>
+                    <div>
+                        <label class="block text-primary font-medium mb-2">Last Name</label>
+                        <input type="text" class="w-full px-4 py-3 border border-secondary rounded-lg focus:outline-none focus:border-accent">
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-primary font-medium mb-2">Email</label>
+                    <input type="email" class="w-full px-4 py-3 border border-secondary rounded-lg focus:outline-none focus:border-accent">
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-primary font-medium mb-2">Will you be attending?</label>
+                    <div class="flex space-x-6">
+                        <label class="flex items-center">
+                            <input type="radio" name="attending" value="yes" class="mr-2 text-accent">
+                            <span class="text-secondary">Yes, I'll be there!</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="attending" value="no" class="mr-2 text-accent">
+                            <span class="text-secondary">Sorry, can't make it</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-primary font-medium mb-2">Number of Guests</label>
+                    <select class="w-full px-4 py-3 border border-secondary rounded-lg focus:outline-none focus:border-accent">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-primary font-medium mb-2">Dietary Restrictions</label>
+                    <textarea class="w-full px-4 py-3 border border-secondary rounded-lg focus:outline-none focus:border-accent" rows="3" placeholder="Please let us know about any dietary restrictions or allergies"></textarea>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-primary font-medium mb-2">Special Message</label>
+                    <textarea class="w-full px-4 py-3 border border-secondary rounded-lg focus:outline-none focus:border-accent" rows="3" placeholder="Share your excitement or well wishes!"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-accent text-white py-3 rounded-lg hover:bg-opacity-90 transition-all hover-lift font-medium">
+                    Send RSVP
+                </button>
+            </form>
+        </div>
+    </section>
+
+     Footer 
+    <footer class="bg-primary py-12 border-t border-secondary">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="font-serif text-3xl text-accent mb-4">Emma & James</div>
+            <p class="text-secondary mb-6">Thank you for being part of our love story</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-secondary hover:text-accent transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-secondary hover:text-accent transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-sm text-secondary">
+                © 2025 Emma & James Wedding. Made with love.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
